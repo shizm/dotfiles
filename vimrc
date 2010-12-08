@@ -65,6 +65,9 @@ filetype plugin on
 :noremap <C-left> :bprev<CR>
 :noremap <C-right> :bnext<CR>
 
+" 大文字Oで空行を挿入する
+nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
+
 "**********
 " neocomplcache
 "**********
