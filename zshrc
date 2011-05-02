@@ -12,11 +12,41 @@ case ${UID} in
 esac
 
 PATH=$HOME/bin:$PATH
+export SVN_EDITOR="vim"
 
 ## Default shell configuration
 #
 # set prompt
 #
+
+### vcs-info
+#autoload -Uz vcs_info
+#zstyle ':vcs_info:*' enable git svn
+#zstyle ':vcs_info:(svn):*' branchformat '%b:r%r'
+#zstyle ':vcs_info:*' formats '(%s)-[%b]'
+#zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+#precmd() {
+  #psvar=()
+  #LANG=en_US.UTF-8 vcs_info
+
+  ## for vcs_info
+  #[[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+
+  ## for rvm
+  #[[ -n "$rvm_ruby_string" ]] && psvar[2]="$rvm_ruby_string"
+
+  ## for gemset
+  #ind=$(expr index $GEM_HOME $rvm_gemset_separator)
+  #if [ $ind -ne 0]; then
+    #length="$(expr length $GEM_HOME)"
+    #sub_length=`expr $length - $ind + 1`
+    #gem_spec=`expr substr $GEM_HOME $ind $sub_length`
+    #[[ -n "$psvar[2]" ]] && psvar[2]="$psvar[2]$gem_spec"
+  #fi
+#}
+#VCS_PROMPT="%1(v|%F{green} %1v%f|)"
+#RUBY_PROMPT="%2(v | %U%B%F{magenta}(%2v)%f%b%u|)"
+
 autoload colors
 colors
 case ${UID} in
@@ -26,13 +56,19 @@ case ${UID} in
     SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
     ;;
 *)
-    PROMPT="%{${fg[red]}%}%/%%%{${reset_color}%} "
+    PROMPT="%{${fg[red]}%}%/%{${reset_color}%} 
+%% "
     PROMPT2="%{${fg[red]}%}%_%%%{${reset_color}%} "
     SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
         PROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]') ${PROMPT}"
     ;;
 esac
+
+#RPROMPT="%1(v|%F{green}%1v%f|)"
+precmd() {
+  RPROMPT="%F{green}[`~/.rvm/bin/rvm-prompt`]%f"
+}
 
 # auto change directory
 #
