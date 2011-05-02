@@ -1,5 +1,6 @@
-escape ^z^z
+escape ^j^j
 hardstatus alwayslastline "%w"
 startup_message off
 defscrollback 5000
 vbell off
+attrcolor b ".I"
