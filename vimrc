@@ -52,6 +52,7 @@ set showcmd
 set showmatch
 " 検索文字列のハイライトを有功にする
 set hlsearch
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " ツールバーを表示しない
 set go-=T
 " ステータスラインを常に表示
@@ -69,6 +70,11 @@ filetype plugin on
 nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
 
 "**********
+" matchit.vim
+"**********
+source $VIMRUNTIME/macros/matchit.vim
+
+"**********
 " neocomplcache
 "**********
 let g:acp_enableAtStartup = 0
@@ -84,3 +90,16 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 "**********
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
+"**********
+" Unite.vim
+"**********
+" 起動時にインサートモード
+let g:unite_enable_start_insert = 1
+" 縦分割で開く
+let g:unite_enable_split_vertically = 1
+" 横幅50で開く
+"let g:unite_winwidth = 50
+
+nnoremap <silent> <Leader>f :<C-u>Unite file<CR>
+nnoremap <silent> <Leader>b :<C-u>Unite buffer<CR>
