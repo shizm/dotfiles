@@ -1,0 +1,39 @@
+urxvt*foreground: #AAAAAA
+urxvt*background: #000000
+urxvt*font: xft:Ricty:size=12
+
+! Normal
+! color0  black
+! color1  red
+! color2  green
+! color3  yellown
+! color4  blue
+! color5  purple
+! color6  cyan
+! color7  white
+! Light
+! color8  black
+! color9  red
+! color10 green
+! color11 yellow
+! color12 blue
+! color13 purple
+! color14 cyan
+! color15 white
+
+urxvt*color0: #000000
+urxvt*color1: #CC0000
+urxvt*color2: #4E9A06
+urxvt*color3: #C4A000
+urxvt*color4: #3465A4
+urxvt*color5: #75507B
+urxvt*color6: #06989A
+urxvt*color7: #D3D7CF
+urxvt*color8: #555753
+urxvt*color9: #EF2929
+urxvt*color10:  #8AE234
+urxvt*color11:  #FCE94F
+urxvt*color12:  #729FCF
+urxvt*color13:  #AD7FA8
+urxvt*color14:  #34E2E2
+urxvt*color15:  #EEEEEC
