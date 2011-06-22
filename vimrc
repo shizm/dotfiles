@@ -70,6 +70,11 @@ filetype plugin on
 nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
 
 "**********
+" matchit.vim
+"**********
+source $VIMRUNTIME/macros/matchit.vim
+
+"**********
 " neocomplcache
 "**********
 let g:acp_enableAtStartup = 0
