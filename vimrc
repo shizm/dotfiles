@@ -52,6 +52,7 @@ set showcmd
 set showmatch
 " 検索文字列のハイライトを有功にする
 set hlsearch
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " ツールバーを表示しない
 set go-=T
 " ステータスラインを常に表示
