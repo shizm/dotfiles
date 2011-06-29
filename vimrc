@@ -70,6 +70,18 @@ filetype plugin on
 nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
 
 "**********
+" quickrun
+"**********
+let g:quickrun_config = {}
+"let g:quickrun_config['ruby.rspec'] = {'command': 'rspec', 'cmdopt': '-c'}
+let g:quickrun_config['ruby.rspec'] = {'command': 'rspec', 'cmdopt': "-c -l {line('.')}"}
+augroup RSpec
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
+augroup END
+
+
+"**********
 " matchit.vim
 "**********
 source $VIMRUNTIME/macros/matchit.vim
