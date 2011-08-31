@@ -70,6 +70,28 @@ filetype plugin on
 nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
 
 "**********
+" vundle
+"**********
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/unite.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'thinca/vim-quickrun'
+Bundle 'thinca/vim-ref'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'nanotech/jellybeans.vim'
+
+filetype plugin indent on
+
+"**********
 " quickrun
 "**********
 let g:quickrun_config = {}
@@ -96,12 +118,6 @@ let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-
-"**********
-" pathogen
-"**********
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 
 "**********
 " Unite.vim
