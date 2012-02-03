@@ -88,6 +88,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'mattn/zencoding-vim'
+Bundle 'sudo.vim'
+Bundle 'Align'
 
 filetype plugin indent on
 
