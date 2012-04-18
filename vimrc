@@ -57,7 +57,6 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 set go-=T
 " ステータスラインを常に表示
 set laststatus=2
-set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ %=[%l/%L,\ %v]\ %p%%
 
 filetype on
 filetype indent on
@@ -80,15 +79,18 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimfiler'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'thinca/vim-quickrun'
 Bundle 'thinca/vim-ref'
+Bundle 'thinca/vim-ft-svn_diff'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'mattn/zencoding-vim'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'sudo.vim'
 Bundle 'Align'
 
