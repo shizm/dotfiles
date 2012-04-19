@@ -88,6 +88,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'h1mesuke/vim-alignta'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'Lokaltog/vim-powerline'
@@ -131,6 +132,12 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 let g:unite_enable_start_insert = 1
 " 縦分割で開く
 let g:unite_enable_split_vertically = 1
+" ウィンドウを横分割して開く
+au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+" ウィンドウを縦分割して開く
+au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
+au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 " 横幅50で開く
 "let g:unite_winwidth = 50
 
