@@ -69,31 +69,36 @@ filetype plugin on
 nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
 
 "**********
-" vundle
+" NeoBundle
 "**********
 filetype off
+filetype plugin indent off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+if has('vim_starting')
+  set rtp+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
 
-Bundle 'gmarik/vundle'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimfiler'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'thinca/vim-quickrun'
-Bundle 'thinca/vim-ref'
-Bundle 'thinca/vim-ft-svn_diff'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'h1mesuke/vim-alignta'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'mattn/zencoding-vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'sudo.vim'
-Bundle 'Align'
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'thinca/vim-ft-svn_diff'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'sudo.vim'
+NeoBundle 'Align'
 
 filetype plugin indent on
 
