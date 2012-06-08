@@ -1,0 +1,50 @@
+[user]
+	name = shizm
+	email = gookun@gmail.com
+[github]
+	user = shizm
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+  autocrlf = input
+[color]
+	ui = true
+[merge]
+	tool = vimdiff
+[alias]
+  s  = status
+	st = status
+  ss = status -s
+  sh = show
+  so = remote show origin
+  ft = fetch
+  ci = commit
+  # checkout
+	co = checkout
+  cb = checkout -b
+  cm = checkout master
+  # branch関連
+  br = branch
+  ba = branch -a
+  bm = branch --merged
+  bn = branch --no-merged
+  # log関連
+  ls = log --stat
+  lp = log -p
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+  # diff関連
+  di = diff
+  dm = diff master
+  dw = diff --color-words
+  dc = diff --cached
+  ds = diff --staged
+  d1 = diff HEAD~
+  d2 = diff HEAD~~
+  d3 = diff HEAD~~~
+  d4 = diff HEAD~~~~
+  d5 = diff HEAD~~~~~
+  d10 = diff HEAD~~~~~~~~~~
+  # grep関連
+  gr = grep
+  gn = grep -n

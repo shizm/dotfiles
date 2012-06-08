@@ -143,3 +143,8 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 
 nnoremap <silent> <Leader>f :<C-u>Unite file<CR>
 nnoremap <silent> <Leader>b :<C-u>Unite buffer<CR>
+
+"**********
+" vim-powerline
+"**********
+let g:Powerline_symbols = 'fancy'
