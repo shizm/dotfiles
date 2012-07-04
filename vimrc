@@ -103,6 +103,11 @@ NeoBundle 'Align'
 filetype plugin indent on
 
 "**********
+" vimfiler
+"**********
+let g:vimfiler_as_default_explorer = 1
+
+"**********
 " quickrun
 "**********
 let g:quickrun_config = {}
