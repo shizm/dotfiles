@@ -15,7 +15,10 @@ syntax on
 set ambiwidth=double
 
 "set t_Co=256
-:colorscheme jellybeans
+":colorscheme jellybeans
+syntax enable
+set background=dark
+colorscheme solarized
 
 set nowrap
 
@@ -79,7 +82,8 @@ if has('vim_starting')
   call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
-NeoBundle 'Shougo/neobundle.vim'
+NeoBundleFetch 'Shougo/neobundle.vim'
+
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/neocomplcache'
@@ -99,8 +103,12 @@ NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'sudo.vim'
 NeoBundle 'Align'
+NeoBundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
+
+" Installation check.
+NeoBundleCheck
 
 "**********
 " quickrun
