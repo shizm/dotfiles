@@ -35,3 +35,6 @@ Icon?
 
 # rvm
 .rvmrc
+
+# rbenv
+.rbenv-version
