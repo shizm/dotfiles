@@ -116,6 +116,7 @@ NeoBundle 'sudo.vim'
 NeoBundle 'Align'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'grep.vim'
+NeoBundle 'slim-template/vim-slim'
 
 filetype plugin indent on
 
